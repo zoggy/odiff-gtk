@@ -24,8 +24,8 @@
 #################################################################################
 
 #
-
-VERSION=1.0 # do not forget to update META
+ # do not forget to update META
+VERSION=1.0
 PACKAGE=diff-gtk
 
 PACKAGES=unix,diff,lablgtk2
