@@ -1,0 +1,9 @@
+version = "1.0"
+description = "Displaying and merging diff results in OCaml/Gtk"
+requires = "unix,diff,lablgtk2"
+archive(byte) = "odiff_gtk.cma"
+archive(plugin,byte) = "odiff_gtk.cma"
+archive(native) = "odiff_gtk.cmxa"
+archive(plugin,native) = "odiff_gtk.cmxs"
+archive(toploop) = "odiff_gtk.cma"
+
