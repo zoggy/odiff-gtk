@@ -1,7 +1,7 @@
 #################################################################################
-#                OCamldiff                                                      #
+#                OCaml-gtk                                                      #
 #                                                                               #
-#    Copyright (C) 2004-2012 Institut National de Recherche en Informatique     #
+#    Copyright (C) 2004-2013 Institut National de Recherche en Informatique     #
 #    et en Automatique. All rights reserved.                                    #
 #                                                                               #
 #    This program is free software; you can redistribute it and/or modify       #
@@ -98,7 +98,7 @@ clean:
 
 # headers :
 ###########
-HEADFILES=Makefile *.ml *.mli *.mly *.mll
+HEADFILES=Makefile *.ml *.mli 
 .PHONY: headers noheaders
 headers:
 	headache -h header -c .headache_config $(HEADFILES)
