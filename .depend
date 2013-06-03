@@ -1,0 +1,9 @@
+odiff_box.cmo : odiff_messages.cmo odiff_merge.cmo
+odiff_box.cmx : odiff_messages.cmx odiff_merge.cmx
+odiff_gtk.cmo : odiff_merge.cmo odiff_box.cmo odiff_gtk.cmi
+odiff_gtk.cmx : odiff_merge.cmx odiff_box.cmx odiff_gtk.cmi
+odiff_merge.cmo : odiff_messages.cmo
+odiff_merge.cmx : odiff_messages.cmx
+odiff_messages.cmo :
+odiff_messages.cmx :
+odiff_gtk.cmi :
