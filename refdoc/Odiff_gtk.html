@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Odiff_gtk" rel="Chapter" href="Odiff_gtk.html"><link title="Displaying diffs" rel="Section" href="#2_Displayingdiffs">
+<link title="Merging diffs" rel="Section" href="#2_Mergingdiffs">
+<title>OCamldiff-gtk : Odiff_gtk</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Odiff_gtk.html">Odiff_gtk</a></h1>
+<pre><span class="keyword">module</span> Odiff_gtk: <code class="code">sig</code> <a href="Odiff_gtk.html">..</a> <code class="code">end</code></pre><div class="info">
+Gui do display and merge differences.<br>
+</div>
+<hr width="100%">
+<br>
+<h2 id="2_Displayingdiffs">Displaying diffs</h2><br>
+<pre><span id="TYPEdiffs_window"><span class="keyword">class type</span> <a href="Odiff_gtk.diffs_window-c.html">diffs_window</a></span> = <code class="code">object</code> <a href="Odiff_gtk.diffs_window-c.html">..</a> <code class="code">end</code></pre><pre><span id="VALdiffs_window"><span class="keyword">val</span> diffs_window</span> : <code class="type">title:string -> file:string -> Odiff.diff list -> <a href="Odiff_gtk.diffs_window-c.html">diffs_window</a></code></pre><div class="info">
+The given file is the second file used in the comparison to compute diffs.<br>
+</div>
+<pre><span id="TYPEstring_diffs_window"><span class="keyword">class type</span> <a href="Odiff_gtk.string_diffs_window-c.html">string_diffs_window</a></span> = <code class="code">object</code> <a href="Odiff_gtk.string_diffs_window-c.html">..</a> <code class="code">end</code></pre><pre><span id="VALstring_diffs_window"><span class="keyword">val</span> string_diffs_window</span> : <code class="type">title:string -><br>       string:string -> Odiff.diff list -> <a href="Odiff_gtk.string_diffs_window-c.html">string_diffs_window</a></code></pre><div class="info">
+The given string is the second string used in the comparison to compute diffs.<br>
+</div>
+<br>
+<h2 id="2_Mergingdiffs">Merging diffs</h2><br>
+<pre><code><span id="TYPEmerge_info"><span class="keyword">type</span> <code class="type"></code>merge_info</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmerge_info.No_conflict"><span class="constructor">No_conflict</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >No conflits for this part of the given text</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmerge_info.Conflict"><span class="constructor">Conflict</span></span> <span class="keyword">of</span> <code class="type">(string * string)</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >Conflict found in the given file: the two alternatives
+           are in parameter</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+<pre><span id="VALbuild_merge_info"><span class="keyword">val</span> build_merge_info</span> : <code class="type">string -> <a href="Odiff_gtk.html#TYPEmerge_info">merge_info</a> list</code></pre><div class="info">
+<code class="code">build_merge_info file</code> returns the list of merge info
+   by analyzing the contents of the given file.
+   It returns a list of <code class="code">merge_info</code>, which represents the
+   parts of the file which have conflits or not.<br>
+</div>
+<pre><span id="VALmanual_merge_window"><span class="keyword">val</span> manual_merge_window</span> : <code class="type">title:string -> file:string -> <a href="Odiff_gtk.html#TYPEmerge_info">merge_info</a> list -> unit</code></pre></body></html>
