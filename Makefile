@@ -24,7 +24,8 @@
 #################################################################################
 
 #
-VERSION=1.0
+
+VERSION=1.0 # do not forget to update META
 PACKAGE=diff-gtk
 
 PACKAGES=unix,diff,lablgtk2
@@ -69,9 +70,9 @@ doc: all
 	$(OCAMLDOC) -t OCamldiff-gtk -d html -html odiff_gtk.mli
 
 webdoc: doc
-	mkdir -p ../ocamldiff-gh-pages/refdoc
-	cp html/* ../ocamldiff-gh-pages/refdoc/
-	cp web/index.html web/style.css ../ocamldiff-gh-pages/
+	mkdir -p ../odiff-gtk-gh-pages/refdoc
+	cp html/* ../odiff-gtk-gh-pages/refdoc/
+	cp web/index.html web/style.css ../odiff-gtk-gh-pages/
 
 .depend depend:
 	$(OCAMLDEP) odiff*.ml odiff*.mli > .depend
